@@ -241,7 +241,7 @@ function getSingleUserInfo(){
 	$('#zipcode').text(user.address.zipcode);
 
 	$('#companyname').text(user.company.name);
-	$('#companycatchPhrase').text(user.company.catchPhrase);
+	$('#companycatchPhrase').text('"' + user.company.catchPhrase + '"');
 
 
 }
