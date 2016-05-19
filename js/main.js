@@ -25,7 +25,7 @@ function loadAlbums(){
 		    	}
 	    }
 	    $('#collectionAlbums').append(valueToAppend);
-	    $('#albumBadge').text(count)
+	    // $('#albumBadge').text(count)
 	});
 }
 
@@ -182,7 +182,7 @@ function loadPosts(){
 	    				
 	    }
 	    $('#collectionPosts').append(valueToAppend);
-	    $('#postBadge').text(count)
+	    // $('#postBadge').text(count)
 	});
 	loadComments();
 	loadAlbums();
@@ -289,12 +289,12 @@ function showContent(value){
 
 function addClassButtonBadge(value, shade){
 	$('#' + value + 'Button').addClass('waves-effect waves-light btn indigo ' + shade);
-	$('#' + value + 'Badge').addClass('waves-effect waves-light btn indigo ' + shade);
+	// $('#' + value + 'Badge').addClass('waves-effect waves-light btn indigo ' + shade);
 }
 
 function removeClassButtonBadge(value){
 	$('#' + value + 'Button').removeClass('waves-effect waves-light btn indigo lighten-2');
-	$('#' + value + 'Badge').removeClass('waves-effect waves-light btn indigo lighten-2');
+	// $('#' + value + 'Badge').removeClass('waves-effect waves-light btn indigo lighten-2');
 }
 
 function parseTwitterDate(tdate) {
