@@ -1,4 +1,4 @@
-var jsonplaceholderAPIUsers = "json/users.json";
+var jsonplaceholderAPIUsers = "/json/users.json";
 var jsonplaceholderAPIPosts = "json/posts.json";
 var jsonplaceholderAPIComments = "json/comments.json";
 var jsonplaceholderAPIAlbums = "json/albums.json";
