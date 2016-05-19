@@ -6,11 +6,13 @@
   <title>Finovertech Profile</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="font/googlefonts.css" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/sweetalert.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="shortcut icon" href="http://www.finovertech.com/wp-content/uploads/2015/10/TOFIconAlphaGray.png" />
   <script src="js/main.js"></script>
+  <script src="js/sweetalert.min.js"></script>
 
 </head>
 
@@ -28,15 +30,36 @@
     <div class="row">
         <div class="col s12 m4">
           <div class="card-panel white">
-            <h4 class="card-title activator grey-text text-darken-4" id="name">Name</h4>
-            <h6 class="card-title activator grey-text text-darken-4" id="email">Email</h5>
-            <h6 class="card-title activator grey-text text-darken-4" id="phone">Phone</h5>
-            <h6 class="card-title activator grey-text text-darken-4" id="website">Website</h5>
+
+            <h5 class="card-title activator grey-text text-darken-4">Details</h5>
+            <h6 class="card-title activator grey-text text-darken-4" id="email">Email</h6>
+            <h6 class="card-title activator grey-text text-darken-4" id="phone">Phone</h6>
+            <h6 class="card-title activator grey-text text-darken-4" id="website">Website</h6>
+
+            <h5 class="card-title activator grey-text text-darken-4" >Address</h5>
+            <h6 class="card-title activator grey-text text-darken-4" id="suite">suite</h6>
+            <h6 class="card-title activator grey-text text-darken-4" id="street">street</h6>
+            <h6 class="card-title activator grey-text text-darken-4" id="city">city</h6>
+            <h6 class="card-title activator grey-text text-darken-4" id="zipcode">zipcode</h6>
+
+            <h5 class="card-title activator grey-text text-darken-4" >Company</h5>
+            <h6 class="card-title activator grey-text text-darken-4" id="companyname">Company Name</h6>
+            <i><h6 class="card-title activator grey-text text-darken-4" id="companycatchPhrase">Company Catch Phrase</h6>
+            </i>
           </div>
         </div>
-        <div class="col s12 m8">
-          <a class="waves-effect waves-light btn indigo" style="width:49%" id="postButton" onclick=showContent("post")><i class="material-icons left">assignment</i>Posts</a>
-          <a class="waves-effect waves-light btn indigo lighten-2" style="width:49%" id="albumButton" onclick=showContent("album")><i class="material-icons left">perm_media</i>Albums</a>
+        <div class="col s12 m8" >
+          <a class="waves-effect waves-light btn indigo" style="width:49%" id="postButton" onclick=showContent("post")><i class="material-icons left">assignment</i>
+          <span class="new badge indigo" id="postBadge">0</span>Post
+          </a>
+          <a class="waves-effect waves-light btn indigo lighten-2" style="width:49%" id="albumButton" onclick=showContent("album")><i class="material-icons left">perm_media</i>
+          <span class="new badge indigo lighten-2" id="albumBadge">0</span>Album
+          </a>
+
+          <ul class="collection" id="collectionPosts" >
+          </ul>
+          <ul class="collection" id="collectionAlbums" style="display: none; width: 130%;">
+          </ul>
         </div>
     </div>
       
@@ -44,7 +67,7 @@
   </div>
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.min.js"></script>
   <script src="js/init.js"></script>
   <script type="text/javascript">
@@ -52,7 +75,7 @@
     {
       event.preventDefault(); // cancel default behavior
     }); 
-    loadUsers();
+    loadPosts();
   </script>
   </body>
 </html>
